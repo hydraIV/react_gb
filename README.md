@@ -1,1 +1,1 @@
-# react_gb
+# Geekbrains React
