@@ -9,9 +9,9 @@ import ReactDOM from 'react-dom';
 
 let messages = ['Привет', 'Как дела?', 'Нормально'];
 
-// const handleClick = () => {
-//
-// };
+const handleClick = () => {
+
+};
 
 const MessageComponent = (props) => <div>{ props.text }</div>;
 
