@@ -9,9 +9,13 @@ import ReactDOM from 'react-dom';
 
 let messages = ['Привет', 'Как дела?', 'Нормально'];
 
-// const handleClick = () => {
-//
-// };
+const handleClick = () => {
+    messages.push('Отлично!');
+    ReactDOM.render(
+        <MessageField messages={ messages } />,
+        document.getElementById('root'),
+        );
+};
 
 const MessageComponent = (props) => <div>{ props.text }</div>;
 
@@ -20,12 +24,13 @@ const MessageField = (props) => {
    return (
        <div>
            <h1>React Chat</h1>
+           <button onClick = {handleClick}>Отправить</button>
            { messageElemnts }
        </div>
    )
 };
 
 ReactDOM.render(
-   <MessageField messages={ messages } />,
-   document.getElementById('root'),
-);
+    <MessageField messages={ messages } />,
+    document.getElementById('root'),
+    );
